@@ -1,0 +1,57 @@
+@import '../colors';
+
+.feed-card {
+  padding: 1.5rem;
+
+  &:not(:last-child) {
+    border-bottom: 10px solid $brand-gray-2;
+  }
+}
+
+.card-header {
+  align-items: center;
+  display: flex;
+
+  [back-img] {
+    border-radius: 100%;
+    flex: 0 0 auto;
+    margin-right: 1.5rem;
+  }
+
+  .card-header-text {
+    // padding: 1.5rem;
+  }
+}
+
+.card-content {
+  padding: 1rem;
+
+  > img {
+    display: none;
+  }
+}
+
+.disclosure {
+  cursor: pointer;
+  font-size: .8rem;
+  margin: 0;
+
+  &:after {
+    content: '>';
+    display: inline;
+  }
+}
+
+.location {
+  color: $brand-yellow-1;
+  margin: 0;
+  letter-spacing: 1px;
+  font-size: 80%;
+  text-transform: uppercase;
+}
+
+.timestamp {
+  color: $brand-light-gray-1;
+  margin-top: 0;
+  letter-spacing: 1px;
+}

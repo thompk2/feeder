@@ -1,0 +1,39 @@
+<div class="container header-spacer">
+  <input type="text" ng-model="$ctrl.searchText" placeholder="Search"/>
+</div>
+
+<form class="radio-grid">
+  <label>
+    <input type="radio" name="test" ng-model="$ctrl.listFilter" value="items">
+    <span>All Posts</span>
+  </label>
+  <label>
+    <input type="radio" name="test" ng-model="$ctrl.listFilter" value="opening">
+    <span>Openings</span>
+  </label>
+  <label>
+    <input type="radio" name="test" ng-model="$ctrl.listFilter" value="closing">
+    <span>Closings</span>
+  </label>
+</form>
+
+<div class="container">
+  <div class="wrapper" ng-if="!$ctrl.data[$ctrl.listFilter].length">
+    <div class="loader"></div>
+  </div>
+
+  <div ng-repeat="item in $ctrl.data[$ctrl.listFilter] | filter:$ctrl.searchText | orderBy:'-date' " class="feed-card" id="card-{{$index}}">
+    <div class="card-header">
+      <div back-img="{{item.image}}"></div>
+      <div class="card-header-text">
+        <h1><a href="{{item.permalinkUrl}}">{{item.title}}</a> <small ng-if="item.content" ng-click="item.expand =! item.expand"><span ng-if="!item.expand">More</span><span ng-if="item.expand">Less</span>...</small></h1>
+        <p class="timestamp">{{item.date | fromNow}} - <span class="location">{{item.permalinkUrl | eaterTitle}}</span><p>
+          <ul>
+            <li ng-repeat="tag in item.tags"><badge type="'info'">{{tag}}</badge></li>
+          </ul>
+      </div>
+    </div>
+      <div ng-show="item.expand" ng-bind-html="item.content" class="card-content"></div>
+      <h1 ng-click="$ctrl.goTo($index)"><small ng-click="item.expand =! item.expand" ng-if="item.expand">Less...</small></h1>
+  </div>
+</div>

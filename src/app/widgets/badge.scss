@@ -1,0 +1,14 @@
+@import '../../colors';
+
+.toast-badge {
+  background: $brand-gray-2;
+  border-radius: 1rem;
+  font-size: .8rem;
+  padding: 3px 10px;
+  vertical-align: middle;
+
+  &.info {
+    background: $brand-light-gray-1;
+    color: $brand-gray-2;
+  }
+}

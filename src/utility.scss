@@ -1,0 +1,236 @@
+$loader-size: 5vw;
+$base-circle-size: -2.2vw;
+$red: $brand-blue-2;
+$r: $loader-size;
+$a: $r * 0.866025;
+$b: $r * 0.5;
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: $loader-size * 2.5;
+}
+.loader {
+  width: $loader-size;
+  height: $loader-size;
+  background: transparent;
+  box-shadow:
+    0 (0 - $loader-size) 0 $base-circle-size $red,
+    $b 0-$a 0 $base-circle-size $red,
+    $a 0-$b 0 $base-circle-size $red,
+    $loader-size 0 0 $base-circle-size $red,
+    $a $b 0 $base-circle-size $red,
+    $b $a 0 $base-circle-size $red,
+    0 $loader-size 0 $base-circle-size $red,
+    0-$b $a 0 $base-circle-size $red,
+    0-$a $b 0 $base-circle-size $red,
+    (0 - $loader-size) 0 0 $base-circle-size $red,
+    0-$a 0-$b 0 $base-circle-size $red,
+    0-$b 0-$a 0 $base-circle-size $red;
+  border-radius: 1000rem;
+  animation: rotate .75s linear infinite;
+}
+
+$o: $base-circle-size;
+$s: $base-circle-size*.95;
+$m: $base-circle-size*.9;
+$l: $base-circle-size*.85;
+$xl: $base-circle-size*.80;
+@keyframes rotate {
+  0% {
+  box-shadow:
+      0 (0 - $loader-size) 0 $s $red,
+      $b 0-$a 0 $m $red,
+      $a 0-$b 0 $l $red,
+      $loader-size 0 0 $xl $red,
+      $a $b 0 $o $red,
+      $b $a 0 $o $red,
+      0 $loader-size 0 $o $red,
+      0-$b $a 0 $o $red,
+      0-$a $b 0 $o $red,
+      (0 - $loader-size) 0 0 $o $red,
+      0-$a 0-$b 0 $o $red,
+      0-$b 0-$a 0 $o $red;
+  }
+  08.333333333% {
+    box-shadow:
+      0 (0 - $loader-size) 0 $o $red,
+      $b 0-$a 0 $s $red,
+      $a 0-$b 0 $m $red,
+      $loader-size 0 0 $l $red,
+      $a $b 0 $xl $red,
+      $b $a 0 $o $red,
+      0 $loader-size 0 $o $red,
+      0-$b $a 0 $o $red,
+      0-$a $b 0 $o $red,
+      (0 - $loader-size) 0 0 $o $red,
+      0-$a 0-$b 0 $o $red,
+      0-$b 0-$a 0 $o $red;
+  }
+  16.66666667% {
+    box-shadow:
+      0 (0 - $loader-size) 0 $o $red,
+      $b 0-$a 0 $o $red,
+      $a 0-$b 0 $s $red,
+      $loader-size 0 0 $m $red,
+      $a $b 0 $l $red,
+      $b $a 0 $xl $red,
+      0 $loader-size 0 $o $red,
+      0-$b $a 0 $o $red,
+      0-$a $b 0 $o $red,
+      (0 - $loader-size) 0 0 $o $red,
+      0-$a 0-$b 0 $o $red,
+      0-$b 0-$a 0 $o $red;
+  }
+  25% {
+    box-shadow:
+      0 (0 - $loader-size) 0 $o $red,
+      $b 0-$a 0 $o $red,
+      $a 0-$b 0 $o $red,
+      $loader-size 0 0 $s $red,
+      $a $b 0 $m $red,
+      $b $a 0 $l $red,
+      0 $loader-size 0 $xl $red,
+      0-$b $a 0 $o $red,
+      0-$a $b 0 $o $red,
+      (0 - $loader-size) 0 0 $o $red,
+      0-$a 0-$b 0 $o $red,
+      0-$b 0-$a 0 $o $red;
+  }
+  33.33333333% {
+    box-shadow:
+      0 (0 - $loader-size) 0 $o $red,
+      $b 0-$a 0 $o $red,
+      $a 0-$b 0 $o $red,
+      $loader-size 0 0 $o $red,
+      $a $b 0 $s $red,
+      $b $a 0 $m $red,
+      0 $loader-size 0 $l $red,
+      0-$b $a 0 $xl $red,
+      0-$a $b 0 $o $red,
+      (0 - $loader-size) 0 0 $o $red,
+      0-$a 0-$b 0 $o $red,
+      0-$b 0-$a 0 $o $red;
+  }
+  41.66666667% {
+    box-shadow:
+      0 (0 - $loader-size) 0 $o $red,
+      $b 0-$a 0 $o $red,
+      $a 0-$b 0 $o $red,
+      $loader-size 0 0 $o $red,
+      $a $b 0 $o $red,
+      $b $a 0 $s $red,
+      0 $loader-size 0 $m $red,
+      0-$b $a 0 $l $red,
+      0-$a $b 0 $xl $red,
+      (0 - $loader-size) 0 0 $o $red,
+      0-$a 0-$b 0 $o $red,
+      0-$b 0-$a 0 $o $red;
+  }
+  50% {
+    box-shadow:
+      0 (0 - $loader-size) 0 $o $red,
+      $b 0-$a 0 $o $red,
+      $a 0-$b 0 $o $red,
+      $loader-size 0 0 $o $red,
+      $a $b 0 $o $red,
+      $b $a 0 $o $red,
+      0 $loader-size 0 $s $red,
+      0-$b $a 0 $m $red,
+      0-$a $b 0 $l $red,
+      (0 - $loader-size) 0 0 $xl $red,
+      0-$a 0-$b 0 $o $red,
+      0-$b 0-$a 0 $o $red;
+  }
+  58.33333333% {
+    box-shadow:
+      0 (0 - $loader-size) 0 $o $red,
+      $b 0-$a 0 $o $red,
+      $a 0-$b 0 $o $red,
+      $loader-size 0 0 $o $red,
+      $a $b 0 $o $red,
+      $b $a 0 $o $red,
+      0 $loader-size 0 $o $red,
+      0-$b $a 0 $s $red,
+      0-$a $b 0 $m $red,
+      (0 - $loader-size) 0 0 $l $red,
+      0-$a 0-$b 0 $xl $red,
+      0-$b 0-$a 0 $o $red;
+  }
+  66.66666666% {
+    box-shadow:
+      0 (0 - $loader-size) 0 $o $red,
+      $b 0-$a 0 $o $red,
+      $a 0-$b 0 $o $red,
+      $loader-size 0 0 $o $red,
+      $a $b 0 $o $red,
+      $b $a 0 $o $red,
+      0 $loader-size 0 $o $red,
+      0-$b $a 0 $o $red,
+      0-$a $b 0 $s $red,
+      (0 - $loader-size) 0 0 $m $red,
+      0-$a 0-$b 0 $l $red,
+      0-$b 0-$a 0 $xl $red;
+  }
+  75% {
+    box-shadow:
+      0 (0 - $loader-size) 0 $xl $red,
+      $b 0-$a 0 $o $red,
+      $a 0-$b 0 $o $red,
+      $loader-size 0 0 $o $red,
+      $a $b 0 $o $red,
+      $b $a 0 $o $red,
+      0 $loader-size 0 $o $red,
+      0-$b $a 0 $o $red,
+      0-$a $b 0 $o $red,
+      (0 - $loader-size) 0 0 $s $red,
+      0-$a 0-$b 0 $m $red,
+      0-$b 0-$a 0 $l $red;
+  }
+  83.33333333% {
+    box-shadow:
+      0 (0 - $loader-size) 0 $l $red,
+      $b 0-$a 0 $xl $red,
+      $a 0-$b 0 $o $red,
+      $loader-size 0 0 $o $red,
+      $a $b 0 $o $red,
+      $b $a 0 $o $red,
+      0 $loader-size 0 $o $red,
+      0-$b $a 0 $o $red,
+      0-$a $b 0 $o $red,
+      (0 - $loader-size) 0 0 $o $red,
+      0-$a 0-$b 0 $s $red,
+      0-$b 0-$a 0 $m $red;
+  }
+  91.66666667% {
+    box-shadow:
+      0 (0 - $loader-size) 0 $m $red,
+      $b 0-$a 0 $l $red,
+      $a 0-$b 0 $xl $red,
+      $loader-size 0 0 $o $red,
+      $a $b 0 $o $red,
+      $b $a 0 $o $red,
+      0 $loader-size 0 $o $red,
+      0-$b $a 0 $o $red,
+      0-$a $b 0 $o $red,
+      (0 - $loader-size) 0 0 $o $red,
+      0-$a 0-$b 0 $o $red,
+      0-$b 0-$a 0 $s $red;
+  }
+  100% {
+    box-shadow:
+      0 (0 - $loader-size) 0 $s $red,
+      $b 0-$a 0 $m $red,
+      $a 0-$b 0 $l $red,
+      $loader-size 0 0 $xl $red,
+      $a $b 0 $o $red,
+      $b $a 0 $o $red,
+      0 $loader-size 0 $o $red,
+      0-$b $a 0 $o $red,
+      0-$a $b 0 $o $red,
+      (0 - $loader-size) 0 0 $o $red,
+      0-$a 0-$b 0 $o $red,
+      0-$b 0-$a 0 $o $red;
+  }
+}
