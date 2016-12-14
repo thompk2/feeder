@@ -70,7 +70,8 @@ module.exports = {
   ],
   output: {
     path: path.join(process.cwd(), conf.paths.dist),
-    filename: '[name]-[hash].js'
+    filename: '[name]-[hash].js',
+    publicPath: '/feeder/'
   },
   entry: {
     app: `./${conf.path.src('index')}`,
