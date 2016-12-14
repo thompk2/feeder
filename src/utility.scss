@@ -9,7 +9,7 @@ $b: $r * 0.5;
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: $loader-size * 2.5;
+    min-height: $loader-size * 4;
 }
 .loader {
   width: $loader-size;
